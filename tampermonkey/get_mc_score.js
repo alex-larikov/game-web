@@ -27,10 +27,10 @@ function getScore(url, elem) {
 
 			parsed = $('<div />').append(parsed);
 
-			score = parsed.find('.first_result').find('.metascore_w').text();
+			var score = parsed.find('.first_result').find('.metascore_w').text();
 			console.log(score);
 			console.log(elem);
-			color = getColorFromScore(parseInt(score.trim()));
+			var color = getColorFromScore(parseInt(score.trim()));
 			$(elem).append("<div class='metacritic subtitle' style='color:" + color + "'>" + score + "</div>");
 		}
 	});
